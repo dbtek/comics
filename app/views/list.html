@@ -1,0 +1,32 @@
+<div class="page-header">
+  <h1>Characters</h1>
+</div>
+
+<div class="col-sm-6">
+  <div class="panel panel-default" ng-repeat="character in characters"
+       ng-if="$even">
+    <div class="panel-body">
+      <a ng-href="#/character/{{character.id}}">
+        <img ng-src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" class="img-responsive">
+      </a>
+    </div>
+    <div class="panel-heading">
+      <a ng-href="#/character/{{character.id}}">{{character.name}}</a>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-6">
+  <div class="panel panel-default" ng-repeat="character in characters" ng-if="$odd">
+    <div class="panel-body">
+      <a ng-href="#/character/{{character.id}}">
+        <img ng-src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" class="img-responsive">
+      </a>
+    </div>
+    <div class="panel-heading">
+      <a ng-href="#/character/{{character.id}}">{{character.name}}</a>
+    </div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
